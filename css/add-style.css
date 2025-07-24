@@ -1,0 +1,136 @@
+li.item-list-comp {
+    line-height: 21px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+li.item-list-comp span {
+    font-weight: 700;
+    display: block;
+}
+div#logo a img {
+    width: auto;
+    border-radius: 80%;
+    height: 90px;
+}
+div#profile {
+    margin: 0 auto;
+    width: 1200px !important;
+    max-width: 100%;
+}
+.postorontiondemoi {
+    font-size: 25px;
+    color: #08c6e7;
+    margin-bottom: 10px;
+    /* margin-top: 8px; */
+    font-weight: 600;
+}
+footer.footer-area.pb-20.pt-30 .container {
+    max-width: 1170px;
+}
+.cont-cont-cert {
+    display: flex;
+    flex-direction: column;
+    align-content: center !important;
+    align-items: center;
+}
+
+span.name-cert {
+    padding-top: 10px;
+    font-size: 15px;
+    font-weight: 600;
+}
+ul.flex-liste-attrib-name {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+li.item-flex-liste-attrib-name {
+    display: flex;
+    width: 48%;
+    justify-content: flex-start;
+}
+
+li.item-flex-liste-attrib-name span:first-child {
+    margin-right: 8px;
+}
+.langue {
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-right: 20px;
+    align-items: center;
+}
+
+.language a:first-child {
+    border-right: 1px solid white;
+    padding-left: 5px;
+}
+
+.language a:last-child {
+    padding-left: 5px;
+}
+
+.language a {
+    color: white;
+    font-size: 13px !important;
+    font-weight: 700;
+}
+
+a.active-langue {
+    color: #08c6e7;
+}
+span.foot-follow {
+    color: white;
+}
+.experience-info .mb-12 {
+    margin-bottom: 3px;
+    font-size: 14px;
+    color: grey;
+}
+
+.experience-info .secondary-color {
+    font-size: 17px;
+    color: green;
+    line-height: 21px;
+    font-weight: 600;
+}
+
+li.single-experience.position-relative.pl-35 {
+    margin-bottom: 20px;
+}
+
+
+h4.mb-12.title-pathway {
+    font-size: 18px;
+}
+li.single-experience.position-relative.pl-35 p {
+    font-size: 14px;
+    line-height: 20px;
+}
+.wrap-lang-btn-dwn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.langue span {
+    font-size: 13px;
+    font-weight: 700;
+}
+.display-flex-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.display-flex-2 .blog-content-wrapper {
+    width: 49%;
+}
+.blog-page-footer {
+    display: flex;
+    flex-direction: column;
+}
