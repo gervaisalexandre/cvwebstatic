@@ -1,4 +1,40 @@
 trigger:
   branches:
     include:
-      - main  # ou master, selon ta branche
+      - main
+
+pool:
+  vmImage: ubuntu-latest
+
+variables:
+  azureAppName: 'tsala-cv-html-app'       # récupéré depuis Terraform (voir plus bas)
+  azureResourceGroup: 'tsala-cv_group-bd8a'       # idem
+  zipPath: '$(Build.ArtifactStagingDirectory)/app.zip'
+
+stages:
+- stage: BuildAndDeploy
+  displayName: 'Build & Deploy static app'
+  jobs:
+  - job: BuildDeploy
+    displayName: 'Build and Deploy'
+    steps:
+    - task: NodeTool@0
+      inputs:
+        versionSpec: '18.x'
+
+    - task: ArchiveFiles@2
+      displayName: 'Zipper les fichiers'
+      inputs:
+        rootFolderOrFile: '$(Build.SourcesDirectory)'
+        includeRootFolder: false
+        archiveType: 'zip'
+        archiveFile: '$(zipPath)'
+        replaceExistingArchive: true
+
+    - task: AzureWebApp@1
+      displayName: 'Déployer sur Azure Web App'
+      inputs:
+        azureSubscription: 'azdev-toappservice-static'  # à configurer (voir ci-dessous)
+        appName: '$(azureAppName)'
+        package: '$(zipPath)'
+        appType: 'webAppLinux'
